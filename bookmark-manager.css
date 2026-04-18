@@ -1,0 +1,89 @@
+
+/* manrope-500 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/manrope-v20-latin-500.woff2') format('woff2'); 
+}
+/* manrope-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/manrope-v20-latin-600.woff2') format('woff2');
+}
+/* manrope-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/manrope-v20-latin-700.woff2') format('woff2'); 
+}
+
+* { 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root { 
+
+    /* NEUTRAL LIGHT MODE COLORS */
+
+    --neutral-light-900:#051513;
+    --neutral-light-800:#4C5C59;
+    --neutral-light-500:#899492;
+    --neutral-light-400:#C0CFCC;
+    --neutral-light-300:#DDE9E7;
+    --neutral-light-100:#E8F0EF;
+    --neutral-light-0:#FFFFFF;
+
+    /* NEUTRAL DARK MODE COLORS */
+
+    --neutral-dark-900:#001414;
+    --neutral-dark-800:#001F1F;
+    --neutral-dark-600:#002E2D;
+    --neutral-dark-500:#004241;
+    --neutral-dark-400:#004746;
+    --neutral-dark-300:#00706E;
+    --neutral-dark-100:#B1B9B9;
+    --neutral-dark-0:#FFFFFF;
+
+    /* TEAL */
+
+    --teal-700:#014745;
+    --teal-800:#013C3B;
+
+    /* RED */
+    --red-600: #FD4740;
+    --red-800:#CB0A04;
+
+    /* FONT SIZES */ 
+
+    --fs-24: calc(24 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
+    --fs-16: calc(16 / 16 * 1rem);
+    --fs-14: calc(14 / 16 * 1rem);
+    --fs-12: calc(14 / 16 * 1rem);
+
+
+    
+    --background-color:var(--neutral-light-100);
+    --dark-text-color:var(--neutral-dark-900);
+    --neutral-text-color:var(--neutral-light-800);
+    --stroke-color:var(--neutral-light-500);
+    --container-color:var(--neutral-light-0);
+    --button-color:var(--teal-700);
+
+
+
+}
+
+body { 
+  background-color:var(--background-color);
+  font-family: 'Manrope', sans-serif;
+}
