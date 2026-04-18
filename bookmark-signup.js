@@ -14,14 +14,16 @@ const errorSignupMsg = document.querySelector(".signup-error");
 // In simple terms, If you try to get a key named "user", and there isn't one, 
 // Assign one with this if statement.
 
-if(!localStorage.getItem("user")) { 
-    const defaultUser = {
+if(!localStorage.getItem("users")) { 
+    const defaultUser = [
+        {
     username: "dummy123", 
     email: "hellothere@gmail.com",
     password: "password123"
     }
+];
 
-    localStorage.setItem("user", JSON.stringify(defaultUser));
+    localStorage.setItem("users", JSON.stringify(defaultUser));
 }
 
 // STEP 3
@@ -44,6 +46,8 @@ function createAccount() {
         return;
     } 
 
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
         // ELSE, create an object with the input within it, and 
         // use localStorage.setItem to set the values of {name, email, password},
         // within the "user" key.
@@ -54,8 +58,12 @@ function createAccount() {
         password: password_signUp
 
     }
+
+    users.push(newUser);
+
+    // ADD THE DATA TO THE LOCAL STORAGE UNDER THE KEY "USER"
     
-    localStorage.setItem("user", JSON.stringify(newUser));
+    localStorage.setItem("users", JSON.stringify(users));
     
 
     errorSignupMsg.innerHTML = `<p style="color: green;">Account created!</p>`;
