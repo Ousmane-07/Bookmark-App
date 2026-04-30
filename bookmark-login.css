@@ -147,7 +147,8 @@ color:var(--neutral-light-800);
   padding:10px 0;
 }
 
-.input { 
+.email_input,
+.password_input { 
   width:100%;
   padding:12px;
   border-radius:8px;
