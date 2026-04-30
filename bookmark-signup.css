@@ -147,7 +147,9 @@ color:var(--neutral-light-800);
   padding:10px 0;
 }
 
-.input { 
+.full_name_input,
+.email_input,
+.password_input{ 
   width:100%;
   padding:12px;
   border-radius:8px;
@@ -200,3 +202,7 @@ color:var(--neutral-light-800);
     color:var(--teal-700);
 }
 
+.error-text { 
+  margin-bottom:15px;
+  color:red;
+}
