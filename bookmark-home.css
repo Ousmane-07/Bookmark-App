@@ -86,6 +86,8 @@ body {
   background-color:var(--background-color);
   font-family: 'Manrope', sans-serif;
   height:100vh;
+  margin: 0;
+
   
 }
 
@@ -243,6 +245,9 @@ body {
   display:flex;
   justify-content:space-between;
   align-items:center;
+  max-width: 1200px;
+  margin: 0 auto;        /* 👈 center it */
+  
 }
 
 .input-container { 
@@ -283,19 +288,24 @@ body {
   display:flex;
   align-items:center;
   justify-content:center;
-  width:169px;
-  height:48px;
+  padding:12px 16px;
   font-size:var(--fs-16);
   font-weight:500;
   border-radius:8px;
   background:var(--teal-700);
   color:var(--neutral-light-0);
   cursor:pointer;
+  flex-shrink: 0;
+}
+
+.bookmark-btn img { 
+  margin:0 auto;
 }
 
 .button-and-picture { 
   display:flex;
   align-items:center;
+  
 }
 
 .button-and-picture img { 
@@ -304,15 +314,19 @@ body {
 
 .main-container { 
   padding: 32px 32px;
-  
-}
-.top-main-container-section { 
   margin-left:297px;
+  margin-right: 0;
+  max-width: 1200px;
+}
+
+.top-main-container-section { 
+  
   display:flex;
   justify-content:space-between;
   align-items:center;
   margin-bottom:26px;
 }
+
 .top-main-container-section p { 
   font-size:var(--fs-24);
   font-weight:700;
@@ -334,12 +348,9 @@ body {
   color:var(--dark-text-color);
 }
 
-.top-main-grid { 
-  margin-left:297px;
-}
 
 .box-grid { 
-  width:338px;
+  
   height:272px;
   background:var(--neutral-light-0);
   padding:16px;
@@ -465,10 +476,69 @@ body {
 
 .top-main-grid{ 
   
+  width:100%;
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap:30px;
- row-gap:40px;
+  row-gap:40px;
+
+
+}
+
+.hamburger-menu { 
+  display:none;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) { 
+  .side-navigation-bar { 
+    display:none;
+  }
+
+  .top-navigation-bar { 
+    width:100%;
+    margin-left:0;
+  }
+
+  .hamburger-menu { 
+    display:block;
+  }
+
+  .hamburger-menu .menu { 
+    background:none;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid var(--neutral-light-400);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    
+  }
+
+  .bookmark-btn-text { 
+  display:none;
+}
+
+  .main-container { 
+    margin-left:0;
+    
+  }
+
+  .top-main-grid { 
+    display:grid;
+   
+  }
+
+}
+
+@media (max-width: 375px) { 
+.bookmark-btn-text { 
+  display:none;
+}
+
+
 
 
 }
