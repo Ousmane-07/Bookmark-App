@@ -19,7 +19,10 @@ function loginUser() {
     const foundUser = users.find(user => user.email === email && user.password === password);
 
     if (foundUser) { 
+      
         errorMsg.innerHTML =  `<p style="color: green;">Login successful!</p>`;
+
+        window.location.href = "bookmark-home.html"
 
     } else { 
         errorMsg.innerHTML = `<p class="error-text">Invalid email or password</p>`;
