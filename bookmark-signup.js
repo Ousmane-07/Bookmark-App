@@ -8,7 +8,7 @@ const errorSignupMsg = document.querySelector(".signup-error");
 
 
 // STEP 2
-// Checks to see if there's no key named "user", and creates one 
+// Checks to see if there's no key named "users", and creates one 
 // using the const defaultUser
 
 // In simple terms, If you try to get a key named "user", and there isn't one, 
